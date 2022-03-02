@@ -39,7 +39,8 @@
         }
     </script>
     <div id="container">
-        <img src="eagle.jpg" alt="eagle" height="100" width="100">
+        <img src="eagle.jpg" alt="eagle" height="100px" width="100px">
+        <p id="bird"></p>
     </div>
     <input type="button" onclick="swapImage()" value="Change Image">
     <script>
@@ -47,18 +48,19 @@
         function swapImage(){
             switch(useImage){
                 case 1:
-                document.getElementById("myImg").src = "eagle.jpg";
+                document.getElementById("bird").src = "eagle.jpg";
+                useImage=2;
                 break;
+               
                 case 2:
-                document.getElementById("myImg").src = "duck.png";
+                document.getElementById("bird").src = "duck.png";
+                useImage=3;
                 break;
+                
                 case 3:
-                document.getElementById("myImg").src = "dodo.png";
+                document.getElementById("bird").src = "dodo.png";
+                useImage= 1;
                 break;
-                default:
-                document.getElementById("myImg").src = "eagle.jpg";
-                break;
-
                 
             }
         }
